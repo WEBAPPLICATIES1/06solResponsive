@@ -132,7 +132,8 @@ footer{
 @media (min-width: 769px){
    header, #center, footer p{
       max-width: 900px;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
    }
 
    header{
@@ -174,37 +175,15 @@ footer{
    }
 
 
-  /* Er is meer dan 1 oplossing mogelijk, deze oplossing + een oplossing waarin alles (inclusief het logo) in een linkerkolom wordt ondergebracht
-   al lijkt het me onwaarschijnlijk dat veel studenten die 2de oplossing zullen gebruiken */
-
-
-   /* (1) width van aside moet 33.33333% zijn want het logo is 300px / 900px
-   (2) margin-left van aside + width van aside + margin-right van aside + 1% moeten samen 100% vormen
-   (3) width van section moet 63.667% zijn: 1% margin-left van aside + 33.3333% van aside + 1% margin-tussen + 65.6667% van section + 1% margin-right van aside 
-   (4) margin-left van aside moet 1% zijn, margin-right van section moet 1% zijn */
-
    section{
+      width: 70%;
       float: right;
-      margin: 0 1% 0 0;
-      width: 63.667%
    }
 
 
    aside{
-      width: 33.3333%;
-      margin-top: 0;
-      margin-right: 65.6667%;
-      margin-bottom: 0.5em;
-      margin-left: 1%;
-   }
-
-   /* Het is belangrijk dat de margin's weer op 0 gezet worden behalve de margin-bottom
-      omdat de margin's berekend worden ten opzichte van de breedte van het element
-      => dus zeker margin-top moet op 0 staan anders kunnen ze bovenaan niet mooi uitgelijnd zijn */
-
-   article{
-      margin: 0 0 0.5em 0;
-      width: 100%;
+      float:left;
+      width: 30%;
    }
 
 }
