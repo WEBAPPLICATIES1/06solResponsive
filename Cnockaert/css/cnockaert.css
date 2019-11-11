@@ -1,62 +1,65 @@
+aside, section, figure, img{
+    box-sizing: border-box;
+}
+
 body {
     background-color: #ececec;
     color: #4b4a4a;
     font-family: Verdana, Arial, sans-serif;
-    padding: 15px;
+    padding: 3%;
     background-color: #fff;
-}
-
-header {
-    margin: 20px;
-}
-
-
-header > aside {
-    display: none;
-}
-
-.logo {
-    display: block;
 }
 
 h1 {
     color: #004990;
     font-weight: 700;
     font-size: 1.25em;
-    margin: 15px 0 15px 0;
+}
+h3 {
+    color: #004990;
+    font-weight: 600;
+    font-size: 1em;
+}
+h1, h3{
+    margin-bottom: 2%;
 }
 
-article {
-    margin-bottom: 10px;
+header{
+    margin-bottom: 3%;
+}
+header > aside {
+    display: none;
+}
+
+header > img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+section article {
+    margin-bottom: 2%;
     overflow: auto;
 }
 
-article .garage {
+section > article > img {
     float: right;
-    margin-left: 5px;
+    margin-left: 1%;
 }
 
 p {
     font-size: 0.9em;
     line-height: 1.7em;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
 }
 
-figure {
-    margin-bottom: 25px;
+main figure {
+    margin-bottom: 5%;
 }
 
-figure > img {
-    max-width: 90%;
+main figure > img {
+    max-width: 100%;
     border: 1px solid grey;
     border-radius: 5px;
-}
-
-h3 {
-    margin: 5px 0 0 0;
-    color: #004990;
-    font-weight: 600;
-    font-size: 1em;
 }
 
 footer {
@@ -65,39 +68,44 @@ footer {
     color: #fff;
     font-size: 0.8em;
     text-align: center;
-    clear: both;
 }
 
-@media (min-width: 990px) {
-    header > aside {
-        display: block;
-        float: right;
-        width: 250px;
-        padding-left: 10px;
-        border-left: 0px solid white;
-    }
-    .logo {
-        float: left;
-    }
+@media screen and (min-width: 990px) {
     header {
         overflow: auto;
     }
-    section {
+    header > aside {
+        display: block;
+        float: right;
+        text-align: right;        
+    }
+    header > img{
+        float: left;
+    }
+    
+    main > section {
         width: 75%;
         float: left;
-        margin-right: 1em;
+        padding-right: 1em;
     }
-    aside {
+
+    main > aside {
         float: left;
-        width: 20%;
+        width: 25%;
         border-left: 1px grey solid;
         padding-left: 1em;
     }
-    figure {
-        display: inline-block;
-        width: 30%;
+    main figure {
+        display: block;
+        float: left;
+        width: 33%;
+        text-align: center;
+        margin-bottom: 0;
     }
-    figure > img {
-        width: 195px;
+    main figure > img {
+        max-width: 98%;
+    }
+    footer{
+        clear: both;
     }
 }

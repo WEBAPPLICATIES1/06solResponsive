@@ -9,7 +9,6 @@ time, mark, audio, video {
    font-size: 100%;
    vertical-align: baseline;
 }
-
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
    display: block;
 }
@@ -27,18 +26,13 @@ ul {
 table {
    border-collapse: collapse;
    border-spacing: 0;
-} 
-
+}
 * {
-   -moz-box-sizing: border-box;
    box-sizing: border-box;	
 }
 
 /* end reset browser styles */
 
-img{
-   max-width: 100%;
-}
 
 body {
    font-family: Verdana, Arial, sans-serif;
@@ -47,63 +41,54 @@ body {
    color: dimgray;
    background: url('../images/background.gif');
 }
-
+img{
+   max-width: 100%;
+}
 a {
    text-decoration: none;
    color: #DE5728;
 }
-
 header img{
    border-radius: 20px;
-   margin: 1em auto;
    display: block;
 }
-
 article{
    margin: 0.5em;
    padding: 0.5em;
    background-color: white;
    border: 1px solid black;
 }
-
 h2{
    color: #DE5728;
    margin-bottom: .25em;
    font-size: 1.25em
 }
-
-#kerstkrans{
+article img:first-child{
    float: left;
    margin-right: 1em;
 }
-
 footer{
    background-color: #DE5728;
    text-align: center;
    color: white;
-   clear: both;
 }
 
-@media (max-width: 768px) {
-
-
-   /* Speciaal voor het menu */   
+@media screen and (max-width: 768px) {
+   header img, nav{      
+      margin: 1em auto;
+   }   
    nav {
       background-color: #DE5728;
       width: 90%;
-      margin: 0 auto;  
       border-radius: 10px;      
       position: relative;
    }
-
-   #menu-icon {
+   nav > a {
       display: block;
+      background: url(../images/menu-icon.png) no-repeat;
       color: white;
-      text-transform: uppercase;
-      background: url("../images/menu-icon.png") no-repeat;
       padding: 0.25em 3em;
    }
-
    nav ul {
       position: absolute;
       display: none;
@@ -130,60 +115,47 @@ footer{
 }
 
 @media (min-width: 769px){
-   header, #center, footer p{
+   header, main, footer p{
       max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
    }
-
    header{
-      clear: both;
       overflow: hidden;
    }
-
    header img{
       margin: 1%;
       float: left;
    }
-
-
    nav {
       margin-left: 45%;
       margin-top: 6em;
    }
-
    nav > a {
       display: none;
    }
-
    nav ul li {
       float: left;
       list-style-type: none;
       padding: 0.5em 1em;
    }
-
    nav ul li a{
       color: #666;
    }
-
    nav ul li a:hover {
       color: #000;
    }
-
-   .active {
+   a.active {
       color: #DE5728;
    }
-
-
-   section{
+   main > section{
       width: 70%;
       float: right;
    }
-
-
-   aside{
-      float:left;
+   main > aside{
       width: 30%;
+      float:left;
+   }      
+   footer{
+      clear: both;
    }
-
 }
