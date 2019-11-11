@@ -72,49 +72,36 @@ footer{
    text-align: center;
    color: white;
 }
-
-@media screen and (max-width: 768px) {
-   header img, nav{      
+@media screen and (max-width: 768px){
+   header img, header nav{
       margin: 1em auto;
-   }   
-   nav {
-      background-color: #DE5728;
+   }
+   header nav{
+      background-color: #de5728;
       width: 90%;
-      border-radius: 10px;      
-      position: relative;
+      border-radius: 10px;
    }
-   nav > a {
-      display: block;
-      background: url(../images/menu-icon.png) no-repeat;
+   header nav > a{
       color: white;
-      padding: 0.25em 3em;
+      background: url(../images/menu-icon.png) no-repeat;
+      padding: .25em 3em;
+      display: inline-block;
    }
-   nav ul {
-      position: absolute;
-      display: none;
-      left: 0em;
-      top: 2.5em;
-      padding: 1em;
+   header nav ul{
       background-color: white;
-      width: 100%;
-      z-index: 100;
-   }
-   nav:hover ul {
-      display: block;
-   }
-   nav ul li {
       list-style-type: none;
+      position: absolute;
+      width: 100%;
+      display: none;
    }
-   nav li a {
-      display: block;
-      border-radius: 10px;      
+   header nav:hover ul{
+      display:block;
    }
-   nav ul li a:hover {
-      font-weight: bold;
+   header nav li a:hover{
+      font-weight:bold;
    }
 }
-
-@media (min-width: 769px){
+@media screen and (min-width: 769px){
    header, main, footer p{
       max-width: 900px;
       margin: 0 auto;
@@ -123,39 +110,39 @@ footer{
       overflow: hidden;
    }
    header img{
+      float:left;
       margin: 1%;
-      float: left;
    }
-   nav {
+   header nav > a{
+      display: none;
+   }
+   header nav li{
+      list-style-type: none;
+      float:left;
+      padding:.5em 1em;
+   }
+   header nav{
       margin-left: 45%;
       margin-top: 6em;
    }
-   nav > a {
-      display: none;
-   }
-   nav ul li {
-      float: left;
-      list-style-type: none;
-      padding: 0.5em 1em;
-   }
-   nav ul li a{
+   header nav a{
       color: #666;
    }
-   nav ul li a:hover {
-      color: #000;
+   header nav a:hover{
+      color: black;
    }
-   a.active {
-      color: #DE5728;
+   a.active{
+      color: #de5728;
    }
    main > section{
-      width: 70%;
       float: right;
+      width: 70%;
    }
    main > aside{
+      float: left;
       width: 30%;
-      float:left;
-   }      
+   }
    footer{
-      clear: both;
+      clear:both;
    }
 }
