@@ -1,5 +1,6 @@
 /* Stijlregels voor de smartphone + tablet weergave */
-section,aside,img{
+
+* {
     box-sizing: border-box;
 }
 body {
